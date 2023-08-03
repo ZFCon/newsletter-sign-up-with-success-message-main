@@ -1,0 +1,76 @@
+:root {
+    --light-orange: rgb(254, 95, 89);
+    --light-orange-transparent: rgba(254, 95, 89, .2);
+    --bright-blue: rgb(54, 56, 77);
+    --dark-blue: rgb(35, 39, 66);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    background-color: var(--dark-blue);
+}
+
+li {
+    list-style-image: url("../assets/images/icon-list.svg");
+}
+
+.row {
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    padding: 0;
+}
+
+@media (max-width: 768px) {
+    .row {
+      flex-direction: column-reverse;
+    }
+  }
+
+.col {
+    padding: 0;
+}
+
+.row .col:first-of-type {
+    padding: 30px;
+}
+
+.form-group .form-control {
+    padding: 10px 20px;
+}
+
+.form-group .form-control:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.form-group .form-control:invalid {
+    background-color: var(--light-orange-transparent);
+    border: 1px solid var(--light-orange);
+}
+
+.row .illustration {
+    display: flex;
+    justify-content: end;
+    padding: 0;
+}
+
+.btn-primary {
+    padding: 10px 20px;
+    margin: 20px 0;
+    width: 100%;
+    background-color: var(--dark-blue);
+}
+
+.btn-primary:active {
+    background-color: var(--light-orange);
+}
+
+.btn-primary:hover {
+    background-color: var(--light-orange);
+}
